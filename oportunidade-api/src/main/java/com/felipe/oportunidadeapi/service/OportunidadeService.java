@@ -63,6 +63,11 @@ public class OportunidadeService {
 		repository.save(mapper.toEntity(oportunidadeEncontrada));
 		return oportunidadeEncontrada;		
 	}
+
+	@Transactional
+	public void deletarById(Long id) {
+		repository.deleteById(id);
+	}
 		
 }
 
