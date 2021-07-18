@@ -36,7 +36,7 @@
     <tr>
       <td>{{ oportunidade.descricao }}</td>
       <td>{{ oportunidade.nomeProspecto }}</td>
-      <td>{{ oportunidade.valor }}</td>
+      <td>{{ oportunidade.valor | currency: 'BRL' }}</td>
     </tr>
   </ng-template>
 
