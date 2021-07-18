@@ -1,6 +1,6 @@
 export interface Oportunidade {
-  id: number
-  nomeProspecto: string
-  descricao: string
-  valor: number
+  id?: number
+  nomeProspecto?: string
+  descricao?: string
+  valor?: number
 }

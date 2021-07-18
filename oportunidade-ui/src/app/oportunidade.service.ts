@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { Oportunidade } from './oportunidade.model';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -14,6 +15,10 @@ export class OportunidadeService {
 
   listar(): Observable<Oportunidade[]> {
     return this.httpClient.get<Oportunidade[]>(this.apiUrl);
+  }
+
+  adicionar(oportunidade: Oportunidade): Observable<Oportunidade>  {
+    return this.httpClient.post<Oportunidade>(this.apiUrl, oportunidade);
   }
 
 }
